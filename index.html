@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Презентация — всеконкурсы.РФ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6cdd2.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .slider {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      transition: transform 1s ease;
+    }
+
+    .slide {
+      flex: 0 0 100vw;
+      height: 100vh;
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background: linear-gradient(135deg, #4800ff, #00ff2a);
+      color: white;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 64px;
+      font-weight: 800;
+      margin-bottom: 30px;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    p {
+      font-size: 24px;
+      max-width: 800px;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+    }
+
+    .btn {
+      background: white;
+      color: #7F00FF;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ddd;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 24px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .slide img.illustration {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logo">
+    <img src="logo.png" alt="Логотип"> всеконкурсы.РФ
+  </div>
+  <div class="slider" id="slider">
+    <div class="slide">
+      <h1>Идея проекта</h1>
+      <p>Создание единой платформы для поиска и участия в конкурсах, грантах и олимпиадах по всей России. Платформа будет агрегировать информацию о конкурсах, предоставлять персонализированные рекомендации и напоминания о сроках подачи заявок. Мы обеспечим удобный интерфейс для всех пользователей, которые смогут быстро и эффективно найти нужные мероприятия.</p>
+      <img class="illustration" src="46229f30-8a11-45ba-890a-0027cc2bf181.jpg" alt="Идея проекта">
+    </div>
+    <div class="slide">
+      <h1>Проблема</h1>
+      <p>Информация о конкурсах разрозненная и труднодоступная. Участники тратят много времени на поиск актуальных мероприятий, часто пропуская сроки подачи заявок. Это особенно сложно для школьников, студентов и молодых специалистов, которые не имеют опыта в поиске и подаче заявок на конкурсах.</p>
+      <img class="illustration" src="9585857.jpg" alt="Проблема">
+    </div>
+    <div class="slide">
+      <h1>Решение</h1>
+      <p>Платформа всеконкурсы.РФ агрегирует все возможности в одном месте, помогает пользователям с подачей заявок, напоминаниями, консультациями и аналитикой. Мы предлагаем интуитивно понятный интерфейс и инструменты для эффективной подачи заявок и отслеживания результатов. Вся информация о конкурсах будет собрана в одном месте, что ускорит поиск и упростит процесс подачи заявок.</p>
+      <img class="illustration" src="v583-tang-17-visualthinking.jpg" alt="Решение">
+    </div>
+    <div class="slide">
+      <h1>Целевая аудитория</h1>
+      <p>Школьники, студенты, педагоги, НКО, стартапы, муниципалитеты — все, кто ищет новые возможности для роста и развития. Более 20 млн человек по всей России потенциально заинтересованы в платформе. Мы также ориентируемся на образовательные учреждения и другие организации, которые могут использовать платформу для распространения информации о конкурсах.</p>
+      <img class="illustration" src="15755.jpg" alt="Целевая аудитория">
+    </div>
+    <div class="slide">
+      <h1>Конкурентные преимущества</h1>
+      <p>Искусственный интеллект Василиса — ваш персональный навигатор. Она помогает найти релевантные конкурсы, оформляет заявки, ведёт календарь и отправляет напоминания. Также предусмотрен AI-чат, встроенная аналитика и API для организаций. Василиса облегчает жизнь пользователю, предоставляя не только информацию, но и персонализированные рекомендации, что делает её незаменимым помощником.</p>
+      <img class="illustration" src="photo_2025-04-21_14-57-26.png" alt="Василиса">
+    </div>
+    <div class="slide">
+      <h1>Бизнес-модель</h1>
+      <p>Freemium: базовый доступ бесплатный, платные подписки для организаций и экспертов, продвижение конкурсов, доступ к расширенной аналитике и инструментарий для проведения собственных мероприятий. Организации смогут продвигать свои конкурсы и получать доступ к мощным инструментам аналитики и управления заявками.</p>
+      <img class="illustration" src="11107.jpg" alt="Бизнес-модель">
+    </div>
+    <div class="slide">
+      <h1>Запрос на грант</h1>
+      <p>Мы просим 2,5 млн рублей на запуск и тестирование платформы в 10 регионах России в течение 12 месяцев. Бюджет включает разработку, маркетинг, зарплату команде и создание базы конкурсов. С помощью этих средств мы сможем выйти на ключевых пользователей и масштабировать проект по всей России.</p>
+      <img class="illustration" src="" alt="Грант">
+    </div>
+  </div>
+  <div class="controls">
+    <button class="btn" onclick="prevSlide()">Назад</button>
+    <button class="btn" onclick="nextSlide()">Вперёд</button>
+  </div>
+
+  <script>
+    const slider = document.getElementById('slider');
+    let index = 0;
+
+    function showSlide(i) {
+      index = i;
+      slider.style.transform = `translateX(-${index * 100}vw)`;
+    }
+
+    function nextSlide() {
+      if (index < slider.children.length - 1) index++;
+      showSlide(index);
+    }
+
+    function prevSlide() {
+      if (index > 0) index--;
+      showSlide(index);
+    }
+  </script>
+</body>
+
+</html>
